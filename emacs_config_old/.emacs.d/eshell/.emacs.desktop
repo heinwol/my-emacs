@@ -1,0 +1,31 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Sep 16 10:58:20 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24417 50588 89561 876000) (desktop . "208") "heinwol@heinwol-G3-3579" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font-backend xft x) (font . "-PfEd-DejaVu Sans Mono-normal-normal-normal-*-16-*-*-*-m-0-iso10646-1") (font-parameter . "Monospace 11") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#DCDCCC") (background-color . "#3F3F3F") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 1) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 0) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#FFFFEF") (sticky) (environment) (frameset--id . "8792-D054-9D5C-A7F9") (frameset--mini t . t) (height . 48) (width . 188) (modeline . t) (unsplittable) (left . 0) (top . 0) (icon-name) (display . ":0") (explicit-name)) ((min-height . 8) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 16) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 152) (min-pixel-width . 200) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 160) (min-pixel-height-safe . 38) (min-pixel-width-safe . 40)) vc (pixel-width . 1920) (pixel-height . 905) (total-width . 192) (total-height . 48) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1920) (pixel-height . 589) (total-width . 192) (total-height . 31) (normal-height . 0.6508287292817679) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 960) (pixel-height . 589) (total-width . 96) (total-height . 31) (normal-height . 1.0) (normal-width . 0.5) (buffer "heinwol (Sunrise)" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 119) (start . 1))) (leaf (last . t) (pixel-width . 960) (pixel-height . 589) (total-width . 96) (total-height . 31) (normal-height . 1.0) (normal-width . 0.5) (buffer "heinwol (Sunrise)" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 119) (start . 1)))) (leaf (last . t) (pixel-width . 1920) (pixel-height . 316) (total-width . 192) (total-height . 17) (normal-height . 0.34917127071823206) (normal-width . 1.0) (buffer "*Sunrise Buttons*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 1) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/heinwol/.emacs.d/eshell"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  nil
+  "heinwol (Sunrise)"
+  'sunrise-mode
+  '(linum-mode override-global-mode rainbow-delimiters-mode openwith-mode dired-omit-mode)
+  119
+  '(nil nil)
+  t
+  '((dirs "/home/heinwol/") (left . t) (sorting-order . "NAME"))
+  '((buffer-display-time 24417 50548 260156 827000) (truncate-lines))
+  '((mark-ring nil)))
+

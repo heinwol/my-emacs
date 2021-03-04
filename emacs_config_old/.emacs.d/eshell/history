@@ -1,0 +1,59 @@
+cd /home/heinwol/
+ls
+exit
+cd /media/heinwol/
+cd /
+cd /
+cd /media/heinwol/
+mnt
+mount
+mount --help
+exit
+cd /home/heinwol/
+mount --help
+fstab
+fdisk
+fdisk --help
+cd /home/heinwol/Downloads/
+okular ticket_507397213.pdf 
+okular Bl
+okular Blank_zayavlenia_na_mat_pomosch_kompensatsiyu_proezda_i_obschezhitia.pdf 
+cd /media/heinwol/OS/Users/vasya/Documents/IT/Python/other/
+exit
+cd /media/heinwol/OS/Users/vasya/Documents/IT/Python/other/
+sudo su
+cd /home/heinwol/
+exit
+cd /media/heinwol/OS/Users/vasya/Documents/IT/Python/other/
+sudo pip3 install -r pip_list.txt
+gnome-terminal
+cd /home/heinwol/.emacs.d/local/
+git push https://github.com/a13/reverse-im.el
+git push https://github.com/a13/reverse-im.el.git
+git pull https://github.com/a13/reverse-im.el.git
+git clone https://github.com/a13/reverse-im.el.git
+cd /home/heinwol/.emacs.d/local/
+git clone https://github.com/jwiegley/use-package
+exit
+cd /media/heinwol/OS/Users/vasya/Documents/Literature/ТерВер/
+okular MS.pdf 
+cd /home/heinwol/.emacs.d/local/
+sudo git clone https://github.com/monsanto/auto-complete-auctex.git
+cd /home/heinwol/Git/
+git clone https://aur.archlinux.org/chromium-vaapi.git
+cd *
+gnome-terminal chromium.install
+cd /home/heinwol/Documents/Win/Documents/IT/Python/homeworks/
+gnome-terminal jupyter notebook
+cd /home/heinwol/Temp/
+sh texlab
+exit
+cd /usr/local/
+cargo install --git https://github.com/latex-lsp/texlab.git
+exitls
+exit
+cd /sudo:root@localhost:/usr/local/bin/my/
+sudo sh digestif.sh 
+cd /home/heinwol/.emacs.d/local/
+git clone https://github.com/vishesh/lsp-racket.el
+cd /home/heinwol/Documents/Racket/

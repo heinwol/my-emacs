@@ -1,0 +1,77 @@
+;;; my-scrtex.el
+
+(defun sctrex-shell-command (source dest temp)
+  (concat (format "racket %s > %s" source dest)
+	  " && "
+	  (format "\"C:\\Program Files\\GnuWin32\\bin\\iconv.exe\" -f utf-8 -t cp1251 %s > %s"
+		  dest temp)))
+
+
+
+(defun compile-scrtex-shell (source-file-name dest-file-name contin)  
+  (letrec ((temp-file-name (concat dest-file-name ".temp"))
+	   (dest-buffer (get-file-buffer dest-file-name))
+	   (execute-after-async-finishes
+	    `(lambda (process signal)
+	       (when (memq (process-status process) '(exit signal))
+		(delete-file ,dest-file-name nil)
+		(rename-file ,temp-file-name ,dest-file-name)
+		(when ,dest-buffer
+		  (with-current-buffer ,dest-buffer
+		    (revert-buffer :ignore-auto :noconfirm)))
+		(funcall ,contin)
+		(shell-command-sentinel process signal)))))
+    (when dest-buffer
+      (with-current-buffer dest-buffer
+	(not-modified)))
+    (let* ((async-buffer (generate-new-buffer "*Async shell command*"))
+           (proc (progn
+		   (async-shell-command (sctrex-shell-command source-file-name
+							      dest-file-name
+							      temp-file-name)
+					async-buffer)
+		   (get-buffer-process async-buffer))))
+      (if (process-live-p proc)
+	  (progn
+	    (set-process-sentinel proc execute-after-async-finishes)
+	    ;; (with-current-buffer async-buffer
+	    ;;   (not-modified)
+	    ;;   (kill-buffer)))
+	(message "No process running...")))))
+
+
+(defun compile-scrtex-with-source-file (source-file-name contin)
+  (let ((target (concat (file-name-directory source-file-name)
+			(file-name-base source-file-name)
+			".tex")))
+    (when (file-newer-than-file-p source-file-name target)
+      (compile-scrtex-shell
+       source-file-name
+       target
+       `(lambda ()
+	 (message "Compiled %S!" ,target)
+	 (funcall ,contin ,target))))))
+
+(defun compile-scrtex-interactive ()
+  (interactive)
+  (if (string-equal "scrbl"
+		    (file-name-extension (buffer-file-name)))
+      (compile-scrtex-with-source-file
+       (buffer-file-name)
+       (lambda (dest-file-name)
+	 (save-window-excursion
+	  (find-file dest-file-name)
+	  (TeX-command-master))))
+      (message "Currently not editing scrbl document!")))
+
+(global-set-key (kbd "<apps>")
+		'compile-scrtex-interactive)
+
+(global-set-key (kbd "C-c l")
+		(lambda () (interactive) (insert (char-from-name "RIGHT ARROW"))))
+
+(add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-mode))
+
+
+(provide 'my-scrtex)
+;;; my-main.el ends here

@@ -1,0 +1,49 @@
+;;; my-scrtex.el
+
+(defun compile-scrtex-shell (source-file-name dest-file-name)
+  (let ((temp-file-name (concat dest-file-name ".temp"))
+	(dest-buffer (get-file-buffer dest-file-name)))
+    (when dest-buffer
+      (with-current-buffer dest-buffer
+	(not-modified)))
+    (shell-command (concat (format "racket %s > %s" source-file-name dest-file-name)
+			   " && "
+			   (format "\"C:\\Program Files\\GnuWin32\\bin\\iconv.exe\" -f utf-8 -t cp1251 %s > %s"
+				   dest-file-name temp-file-name)))
+    (delete-file dest-file-name nil)
+    (rename-file temp-file-name dest-file-name)
+    (when dest-buffer
+      (with-current-buffer dest-buffer
+	(revert-buffer :ignore-auto :noconfirm)))))
+
+
+(defun compile-scrtex-with-current-file (source-file-name)
+  (let ((target (concat (file-name-directory source-file-name)
+			(file-name-base source-file-name)
+			".tex")))
+    (when (file-newer-than-file-p source-file-name target)
+      (compile-scrtex-shell source-file-name target)
+      (message "Compiled %S!" target))
+    target))
+
+(defun compile-scrtex-interactive ()
+  (interactive)
+  (if (string-equal "scrbl"
+		    (file-name-extension (buffer-file-name)))
+      (let ((dest-file-name (compile-scrtex-with-current-file (buffer-file-name))))
+	(save-window-excursion
+	  (find-file dest-file-name)
+	  (TeX-command-master)))
+      (message "Currently not editing scrbl document!")))
+
+(global-set-key (kbd "<apps>")
+		'compile-scrtex-interactive)
+
+(global-set-key (kbd "C-c l")
+		(lambda () (interactive) (insert (char-from-name "RIGHT ARROW"))))
+
+(add-to-list 'auto-mode-alist '("\\.scrbl\\'" . racket-mode))
+
+
+(provide 'my-scrtex)
+;;; my-main.el ends here

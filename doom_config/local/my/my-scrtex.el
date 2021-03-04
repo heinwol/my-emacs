@@ -1,0 +1,128 @@
+;;; my-scrtex.el
+;; -*- lexical-binding: t -*-
+(setq lexical-binding t)
+
+
+
+(defun scrtex-shell-commands (source dest temp)
+  (let* ((f #'(lambda (str) (encode-coding-string str 'windows-1251)))
+         (res (cons (format "racket \"%s\" > \"%s\"" (funcall f source) (funcall f dest))
+	          (format "\"C:\\Program Files\\GnuWin32\\bin\\iconv.exe\" -f utf-8 -t cp1251 \"%s\" > \"%s\"" ;cp1251
+		          (funcall f dest) (funcall f temp)))))
+    ;(print! (concat (car res) " ; " (cdr res)))
+    res
+    ))
+
+
+(defun compile-scrtex-shell (source-file-name dest-file-name contin)
+  (letrec ((temp-file-name (concat dest-file-name ".temp"))
+	   (dest-buffer (get-file-buffer dest-file-name))
+	   (execute-after-async-finishes
+	    `(lambda (process event)
+	       (cond ((string-equal event "finished\n")
+		      (when (memq (process-status process) '(exit event))
+			(delete-file ,dest-file-name nil)
+			(rename-file ,temp-file-name ,dest-file-name)
+			(when ,dest-buffer
+			  (with-current-buffer ,dest-buffer
+			    (revert-buffer :ignore-auto :noconfirm)))
+			(funcall ,contin)))))))
+    (when dest-buffer
+      (with-current-buffer dest-buffer
+	(not-modified)))
+    (let ((cmds (scrtex-shell-commands source-file-name
+				       dest-file-name
+				       temp-file-name)))
+      (when (get-buffer "*Scrtex compilation*")
+	  (with-current-buffer "*Scrtex compilation*"
+	    (setf (buffer-string) "")))
+      (set-process-sentinel
+       (start-process-shell-command "compiling racket" "*Scrtex compilation*" (car cmds))
+       `(lambda (proc event)
+	  (cond ((string-equal event "finished\n")
+		 (set-process-sentinel
+		  (start-process-shell-command "iconv-ing" "*Scrtex compilation*" ,(cdr cmds))
+		  ,execute-after-async-finishes)
+		 )
+		((string-equal event "exited abnormally with code 1\n")
+		 (progn
+		   (pop-to-buffer "*Scrtex compilation*")))))))))
+
+
+(defun compile-scrtex-with-source-file (source-file-name contin)
+  (let ((target (concat (file-name-directory source-file-name)
+			(file-name-base source-file-name)
+			".tex")))
+    (if (file-newer-than-file-p source-file-name target)
+	(compile-scrtex-shell
+	 source-file-name
+	 target
+	 `(lambda ()
+	    (message "Compiled %S!" ,target)
+	    (funcall ,contin ,target)))
+      (funcall contin target))))
+
+(defun compile-scrtex-interactive ()
+  (interactive)
+  (if (string-equal "scrbl"
+		    (file-name-extension (buffer-file-name)))
+      (progn
+        (mapc #'(lambda (proc)
+                  (when (get-process proc)
+                    (delete-process proc)))
+              '("compiling racket" "iconv-ing"))
+        (compile-scrtex-with-source-file
+         (buffer-file-name)
+         (lambda (dest-file-name)
+	   (save-window-excursion
+	     (find-file dest-file-name)
+	     (TeX-command-run-all nil))))) ;TeX-command-master
+    (message "Currently not editing scrbl document!")))
+
+;;;;;;;;;;;;;;;;;;
+
+(defun re-seq (regexp string)
+  "Get a list of all regexp matches in a string"
+  (reverse
+   (save-match-data
+     (let ((pos 0)
+	   matches)
+       (while (string-match regexp string pos)
+	 (push (match-string 0 string) matches)
+	 (setq pos (match-end 0)))
+       matches))))
+
+(defun lists-of-str-to-scrtex-array (lst)
+  (let ((str-to-arrow `(lambda (str) (concat "@→{" str "}"))))
+    (funcall
+     ;;(lambda (str) (concat "@{"))
+     str-to-arrow
+     (mapconcat (lambda (in-lst)
+		  (mapconcat str-to-arrow
+			     in-lst
+			     " "))
+		lst
+		"\n"))))
+
+;;;;;;;;;;;;;;;;;;
+
+;; (lists-of-str-to-scrtex-array
+;;  '(("23" "788" "57-lala")
+;;    ("23" "ds-43+=3" "ads32%3")))
+
+
+(global-set-key (kbd "<kp-5>")
+		'compile-scrtex-interactive)
+
+(global-set-key (kbd "C-c l")
+		(lambda () (interactive) (insert "→")))
+
+(global-set-key (kbd "C-c C-M-l")
+		(lambda () (interactive) (insert "@→{}") (backward-char 1)))
+
+
+(add-to-list 'auto-mode-alist '("\\.scrbl\\'" . LaTeX-mode))
+
+
+(provide 'my-scrtex)
+;;; my-main.el ends here

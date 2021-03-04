@@ -1,0 +1,103 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Mon Jan 25 14:02:13 2021
+;; Desktop file format version 208
+;; Emacs version 27.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24590 42293 587634 0) (desktop . "208") "heinwol@tablet" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font . "-outline-Consolas-normal-normal-normal-mono-17-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#DCDCCC") (background-color . "#3F3F3F") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 1) (tab-bar-lines . 0) (height . 31) (tool-bar-lines . 2) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 21) (scroll-bar-height . 21) (fullscreen . maximized) (z-group) (visibility . t) (display-type . color) (background-mode . dark) (cursor-color . "#FFFFEF") (environment) (last-focus-update . t) (frameset--id . "9579-E79E-3D68-F10F") (frameset--mini t . t) (width . 147) (modeline . t) (unsplittable) (left + -9) (top + -9) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 7) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 80) (min-pixel-width . 90) (min-pixel-height-ignore . 40) (min-pixel-width-ignore . 63) (min-pixel-height-safe . 20) (min-pixel-width-safe . 18)) leaf (pixel-width . 1366) (pixel-height . 610) (total-width . 152) (total-height . 31) (normal-height . 1.0) (normal-width . 1.0) (buffer "test.hs" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 3 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 131) (start . 1)) (prev-buffers ("test.hs" 1 131) ("other" 1 1226) ("report6.scrbl" 1072 1194) ("report6.tex" 1 1) ("6" 1 508) ("*Racket REPL*" 3169 4038) ("test.rkt" 304 304) ("*scratch*" 1 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring '("haskell" "\\(1\\).*?\\(-\\).*?\\(a\\)" "@R" "\\(и[ ]значения\\).*?\\(пока\\)" "уровне" "таблиц" "latex" "парам" "\\texttt{" "use-pack" "local" "browse-kill-rin" "swit" "switches" "sunris" "scr"))
+(setq register-alist nil)
+(setq file-name-history '(#("c:/Users/heinwol/Documents/other/test.hs" 0 40 (ivy-index 0)) #("c:/Users/heinwol/Documents/other/" 0 33 (ivy-index 6)) #("c:/Users/heinwol/Documents/labs/kanatn/6/report6.scrbl" 0 54 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/6/" 0 41 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/" 0 32 (ivy-index 0)) #("c:/Users/heinwol/Documents/other/test.rkt" 0 41 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/5/report5.scrbl" 0 54 (ivy-index 15)) #("c:/Users/heinwol/Documents/racket/scrtex/" 0 41 (ivy-index 0)) #("c:/Users/heinwol/AppData/Roaming/.emacs.d/local/my/" 0 51 (ivy-index 4)) #("c:/Users/heinwol/AppData/Roaming/.emacs.d/local/popup-kill-ring.el" 0 66 (ivy-index -1)) #("c:/Users/heinwol/AppData/Roaming/.emacs.d/local/popup-kill-ring.el.txt" 0 70 (ivy-index 0)) #("c:/Users/heinwol/AppData/Roaming/.emacs.d/" 0 42 (ivy-index 2)) #("c:/Users/heinwol/Documents/course/report/" 0 41 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/kprj.sty.try-utf-8" 0 59 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/old" 0 44 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/5/report5_2.scrbl" 0 56 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/5/" 0 41 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/code/elets_dankov_light_harvest/course_main.py" 0 80 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/code/elets_dankov_light_harvest/main.py" 0 73 (ivy-index 7)) #("c:/Users/heinwol/Documents/labs/bzhd/lab3/bzhd_lab_3.docx" 0 57 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/bzhd/lab3" 0 41 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/bzhd" 0 36 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/6" 0 40 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/5/l5/lab_5v2.m" 0 53 (ivy-index 4)) #("c:/Users/heinwol/Documents/labs/kanatn/test/test.scrbl" 0 54 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/test" 0 43 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/" 0 39 (ivy-index 0)) #("c:/Users/heinwol/Documents/labs/kanatn/5/l5/me/000СНАЧАЛО.txt" 0 61 (ivy-index 2)) #("c:/Users/heinwol/Documents/labs/kanatn/5/report5.log" 0 52 (ivy-index 0)) #("c:/Users/heinwol/Documents/other/Economics_Koreshkov_lecture6.org" 0 65 (ivy-index 0)) #("c:/Users/heinwol/Documents/other/Экономинка_Корешков_лекция6.org" 0 64 (ivy-index 4)) #("c:/Users/heinwol/Documents/other/Экономинка_Корешков_лекция6.txt" 0 64 (ivy-index 2)) #("c:/Users/heinwol/Documents/other" 0 32 (ivy-index 0)) #("c:/Users/heinwol/Documents/" 0 27 (ivy-index 0)) #("c:/Users/heinwol/Documents/racket/scrtex/scrtex.rkt" 0 51 (ivy-index 9)) #("c:/Users/heinwol/Documents/racket/scrtex/auto/" 0 46 (ivy-index 2)) #("c:/Users/heinwol/Documents/labs/kanatn/KTDS_M2_RK.pdf" 0 53 (ivy-index 5)) #("c:/Users/heinwol/Documents/labs/kanatn/4/report/report4.scrbl" 0 61 (ivy-index 19)) #("c:/Users/heinwol/AppData/Local/MiKTeX/2.9/miktex/log/latexmk.log" 0 64 (ivy-index 0)) #("c:/Users/heinwol/AppData/Roaming/.emacs.d/init.el" 0 49 (ivy-index 16)) #("c:/Users/heinwol/Documents/course/code" 0 38 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/literature" 0 44 (ivy-index 0)) #("c:/Users/heinwol/Downloads/" 0 27 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/kprj.sty" 0 49 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/test/" 0 46 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/test/test.scrbl" 0 56 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/test" 0 45 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/course.tex" 0 51 (ivy-index 2)) #("c:/Users/heinwol/Documents/course/report/course.bib" 0 51 (ivy-index 11)) #("c:/Users/heinwol/Downloads/gost" 0 31 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/course.aux" 0 51 (ivy-index 0)) #("c:/Users/heinwol/Documents/course/report/course.scrbl" 0 53 (ivy-index 8)) #("c:/Program Files/Emacs/" 0 23 (ivy-index 0))))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "c:/Users/heinwol/Documents/other/test.hs"
+  "test.hs"
+  'haskell-mode
+  '(visual-line-mode eldoc-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode openwith-mode)
+  131
+  '(1 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 24590 42291 395792 0) (buffer-file-coding-system . utf-8-dos) (truncate-lines))
+  '((mark-ring (132 132 132 126))))
+
+(desktop-create-buffer 208
+  nil
+  "other"
+  'dired-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode openwith-mode)
+  1226
+  '(nil nil)
+  t
+  '("c:/Users/heinwol/Documents/other/")
+  '((buffer-display-time 24589 54304 781135 0) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/heinwol/Documents/labs/kanatn/6/report6.scrbl"
+  "report6.scrbl"
+  'latex-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode openwith-mode)
+  1194
+  '(1544 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24589 54277 111575 0) (buffer-file-coding-system . utf-8-dos) (truncate-lines))
+  '((mark-ring (1414 1413 1359 1328 1026 324 324 474 474 474 474 474))))
+
+(desktop-create-buffer 208
+  "c:/Users/heinwol/Documents/labs/kanatn/6/report6.tex"
+  "report6.tex"
+  'latex-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode openwith-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24589 42949 765406 0) (buffer-file-coding-system . windows-1251-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "6"
+  'dired-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode openwith-mode)
+  508
+  '(nil nil)
+  t
+  '("c:/Users/heinwol/Documents/labs/kanatn/6/")
+  '((buffer-display-time 24589 42593 405505 0) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Users/heinwol/Documents/other/test.rkt"
+  "test.rkt"
+  'racket-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode hs-minor-mode racket-xp-mode openwith-mode)
+  543
+  '(964 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time 24589 54443 340585 0) (buffer-file-coding-system . utf-8-dos) (truncate-lines))
+  '((mark-ring (872 776 680 512 893 797 990 543 304 304 305 305 15 305 305 584))))
+
+(desktop-create-buffer 208
+  "c:/Users/heinwol/Documents/course/report/course.scrbl"
+  "course.scrbl"
+  'latex-mode
+  '(visual-line-mode yas-minor-mode override-global-mode rainbow-delimiters-mode company-mode ivy-mode TeX-PDF-mode orgtbl-mode openwith-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-display-time) (buffer-file-coding-system . utf-8-dos) (truncate-lines))
+  '((mark-ring nil)))
+

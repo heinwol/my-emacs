@@ -1,0 +1,4 @@
+/sudo:root@localhost:/etc/bash.bashrc
+/tmp/#!sudo:root@localhost:!etc!bash.bashrc#
+/home/heinwol/.bashrc
+/home/heinwol/#.bashrc#

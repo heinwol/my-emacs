@@ -1,0 +1,2 @@
+;;; Generated package description from c:/Users/heinwol/AppData/Roaming/.emacs.d/elpa/swap-regions-20180915.1346/swap-regions.el  -*- no-byte-compile: t -*-
+(define-package "swap-regions" "20180915.1346" "Swap text in two regions" '((emacs "24.3")) :commit "f4fd9880cf690e003fcde88dcf2b46adbbbb03cd" :keywords '("convenience") :authors '(("Xu Chunyang" . "mail@xuchunyang.me")) :maintainer '("Xu Chunyang" . "mail@xuchunyang.me") :url "https://github.com/xuchunyang/swap-regions.el")

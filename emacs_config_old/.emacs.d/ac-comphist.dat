@@ -1,0 +1,74 @@
+((("add-hook" .
+   [0 0 0 0 0 0 0 1])
+  ("should" .
+   [0 0 0 1 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("AUCTeX" .
+   [0 0 1 0 0 0])
+  ("tool-bar" .
+   [0 0 0 0 1 0 0 0])
+  ("getenv" .
+   [1 0 0 0 0 0])
+  ("eval-when-compile" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("reverse-im.el" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("use-package" .
+   [0 0 0 1 0 0 1 0 0 0 1])
+  ("sunrise-tabs-on" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("global-rainbow-delimiters-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("global-hl-line-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("zenburn-theme" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("require" .
+   [3 0 1 5 0 0 3])
+  ("define-globalized-minor-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("my-main" .
+   [0 0 1 0 0 0 1])
+  ("hl-line-mode" .
+   [0 0 1 0 0 0 0 1 0 0 0 0])
+  ("define-key" .
+   [0 0 0 0 0 0 0 2 0 0])
+  ("define-global-minor-mode" .
+   [0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("delb" .
+   [0 0 0 1])
+  ("global-linum-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rainbow-delimiters" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("sunrise-tabs" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("t" .
+   [1])
+  ("reverse-im" .
+   [1 0 0 0 0 1 0 0 0 0])
+  ("package" .
+   [1 0 0 0 0 0 0])
+  ("dumb-jump" .
+   [0 0 0 1 0 0 0 0 0])
+  ("wrap" .
+   [1 0 0 0])
+  ("toggle-word-wrap" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("a" .
+   [1])
+  ("electric-pair-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 0])
+  ("lambda" .
+   [0 0 1 0 0 0])
+  ("underline" .
+   [0 0 0 1 0 0 0 0 0])
+  ("mathbb" .
+   [0 0 1 0 0 0])
+  ("при" .
+   [1 0 0])
+  ("все" .
+   [2 0 0])))
